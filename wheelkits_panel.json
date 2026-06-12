@@ -1,0 +1,49 @@
+{
+  "1511847599869661365": {
+    "1514530263151935488": {
+      "serverId": "Ascendant 5x",
+      "channelId": "1511847599869661368",
+      "setBy": "1333594958006976614",
+      "status": "enabled",
+      "createdAt": 1781162553037,
+      "updatedAt": 1781162556066
+    },
+    "1514531587268542545": {
+      "serverId": "Ascendant 5x",
+      "channelId": "1511847599869661368",
+      "setBy": "1333594958006976614",
+      "status": "disabled",
+      "createdAt": 1781162868938
+    },
+    "1514694170415992862": {
+      "serverId": "Ascendant 5x",
+      "channelId": "1511847599869661368",
+      "setBy": "1333594958006976614",
+      "status": "enabled",
+      "createdAt": 1781201631708,
+      "updatedAt": 1781201634148
+    },
+    "1514694647845224630": {
+      "serverId": "Ascendant 5x",
+      "channelId": "1511847599869661368",
+      "setBy": "1333594958006976614",
+      "status": "disabled",
+      "createdAt": 1781201745493
+    },
+    "1514699935407145111": {
+      "serverId": "Ascendant 5x",
+      "channelId": "1511847599869661368",
+      "setBy": "1333594958006976614",
+      "status": "disabled",
+      "createdAt": 1781203006238
+    },
+    "1514715582769926174": {
+      "serverId": "Ascendant 5x",
+      "channelId": "1511847599869661368",
+      "setBy": "1333594958006976614",
+      "status": "disabled",
+      "createdAt": 1781206736834,
+      "updatedAt": 1781209658022
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kitsClaimed": 1,
+  "players": {
+    "jovan654321": {
+      "name": "Jovan654321",
+      "firstSeenAt": 1775506152550,
+      "lastSeenAt": 1776372216336,
+      "firstServerId": "Rise 6x"
+    },
+    "duckingnorris": {
+      "name": "DUCKingNorris",
+      "firstSeenAt": 1781200873143,
+      "lastSeenAt": 1781203016901,
+      "firstServerId": "Ascendant 5x"
+    }
+  },
+  "updatedAt": 1781203016901
+}

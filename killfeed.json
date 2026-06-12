@@ -1,0 +1,87 @@
+{
+  "1490706543941914785": {
+    "Rise 6x": {
+      "startedAt": 1775950040844,
+      "kills": [
+        {
+          "killer": "Fall",
+          "victim": "Jovan654321",
+          "at": 1776001152572,
+          "elapsed": "851.51"
+        },
+        {
+          "killer": "Fall",
+          "victim": "Jovan654321",
+          "at": 1776017712613,
+          "elapsed": "1127.51"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274427879,
+          "elapsed": "5406.27"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274430704,
+          "elapsed": "5406.29"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274433959,
+          "elapsed": "5406.33"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274437018,
+          "elapsed": "5406.36"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274445509,
+          "elapsed": "5406.44"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274450840,
+          "elapsed": "5406.49"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274456807,
+          "elapsed": "5406.55"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274459142,
+          "elapsed": "5406.58"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274461039,
+          "elapsed": "5407.00"
+        },
+        {
+          "killer": "Jovan654321",
+          "victim": "Scientist",
+          "at": 1776274468749,
+          "elapsed": "5407.07"
+        }
+      ]
+    }
+  },
+  "1466413372890157168": {
+    "Rise 6x": {
+      "startedAt": 1776274470800,
+      "kills": []
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "1490706543941914785": {
+    "Rise 18x": {
+      "guildId": "1490706543941914785",
+      "serverId": "Rise 18x",
+      "channelId": "1490706545309122755",
+      "pingRoleId": "1490706543941914785",
+      "startAt": 1775486779922,
+      "kitName": "KOTH",
+      "spawnCap": 3,
+      "started": true,
+      "ended": true,
+      "joinedByClan": {
+        "1490722338751381746": [
+          "1431760554032238805"
+        ]
+      },
+      "joinedIgnByUser": {
+        "1431760554032238805": "jovan654321"
+      },
+      "preStartDeadUsers": [],
+      "clanSpawnMap": {
+        "1490722338751381746": 1
+      },
+      "clanOrder": [
+        "1490722338751381746"
+      ],
+      "killsByUser": {},
+      "aliveByClan": {
+        "1490722338751381746": []
+      },
+      "deadUsers": [
+        "1431760554032238805"
+      ],
+      "createdAt": 1775486719922,
+      "createdBy": "1431760554032238805",
+      "messageId": "1490724093451042896",
+      "startedMessageId": "1490724345600020502",
+      "rfSequenceDone": true,
+      "ignToUserId": {
+        "jovan654321": "1431760554032238805"
+      },
+      "userToClanRole": {
+        "1431760554032238805": "1490722338751381746"
+      },
+      "startedAt": 1775486779931,
+      "rfFrequencyUsed": "1292",
+      "rfSpawnCmd": "rf.spawnfakebroadcaster \"1292\" \"10000\"",
+      "rfSpawnResp": "Spawned a fake broadcaster at (0.00, 0.00, 0.00), range 10000, frequency 1292.",
+      "rfSpawnedAt": 1775486780904,
+      "rfRemoveCmd": "rf.removefakeboardcaster \"1292 MHz\"",
+      "rfRemoveResp": "Removed fake broadcaster at index 0.",
+      "rfRemovedAt": 1775486795985,
+      "rfDoneAt": 1775486795985,
+      "endedAt": 1775486840936,
+      "endedReason": "no-players",
+      "spawnReservations": {}
+    },
+    "Rise 6x": {
+      "guildId": "1490706543941914785",
+      "serverId": "Rise 6x",
+      "channelId": "1490706545309122755",
+      "pingRoleId": "1491034345878589502",
+      "startAt": 1775684534668,
+      "kitName": "KOTH",
+      "spawnCap": 2,
+      "started": true,
+      "ended": true,
+      "joinedByClan": {
+        "1491034345878589502": [
+          "1431760554032238805"
+        ]
+      },
+      "joinedIgnByUser": {
+        "1431760554032238805": "jovan654321"
+      },
+      "preStartDeadUsers": [],
+      "clanSpawnMap": {
+        "1491034345878589502": 1
+      },
+      "clanOrder": [
+        "1491034345878589502"
+      ],
+      "killsByUser": {},
+      "aliveByClan": {
+        "1491034345878589502": [
+          "1431760554032238805"
+        ]
+      },
+      "deadUsers": [],
+      "createdAt": 1775684474668,
+      "createdBy": "1431760554032238805",
+      "messageId": "1491553532086718520",
+      "startedMessageId": null,
+      "rfSequenceDone": true,
+      "spawnReservations": {},
+      "ignToUserId": {
+        "jovan654321": "1431760554032238805"
+      },
+      "userToClanRole": {
+        "1431760554032238805": "1491034345878589502"
+      },
+      "startedAt": 1775684534674,
+      "rfError": "no-frequency",
+      "rfDoneAt": 1775684535294,
+      "endedAt": 1775684547603,
+      "winnerRoleId": "1491034345878589502",
+      "mvpUserId": "1431760554032238805",
+      "mvpKills": 0,
+      "homeTeleportedAt": 1775684671675,
+      "endedReason": "empty-zone",
+      "leaderboardAwardedAt": 1775684547604,
+      "serverDisplay": "Rise 6x",
+      "queueStatusByClan": {
+        "1491034345878589502": {
+          "1431760554032238805": {
+            "gamertag": "jovan654321",
+            "status": "confirmed"
+          }
+        }
+      }
+    }
+  }
+}

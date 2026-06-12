@@ -1,0 +1,17 @@
+{
+  "Rise 2x": {
+    "tips": {
+      "enabled": false
+    }
+  },
+  "Rise 6x": {
+    "tips": {
+      "enabled": true
+    }
+  },
+  "Ascendant 5x": {
+    "tips": {
+      "enabled": false
+    }
+  }
+}

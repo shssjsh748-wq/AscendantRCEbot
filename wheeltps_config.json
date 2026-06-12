@@ -1,0 +1,14 @@
+{
+  "1511847599869661365": {
+    "Ascendant 5x": {
+      "north": {
+        "enabled": false,
+        "name": "Launch",
+        "combatlock": false,
+        "cooldownMinutes": 1,
+        "coordsMode": "auto",
+        "coords": null
+      }
+    }
+  }
+}

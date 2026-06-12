@@ -1,0 +1,70 @@
+{
+  "servers": {
+    "1490706543941914785": {
+      "Rise 6x": {
+        "maps": [
+          {
+            "id": 6,
+            "imageUrl": "https://cdn.discordapp.com/attachments/1491034348948820034/1492653941547204699/MAP_IWPE_TODAY.png?ex=69dc1dcf&is=69dacc4f&hm=9463c08397ea3258f10002661dfb432e06e3012521690c802f93f4e0baa77476&",
+            "createdAt": 1775946922064
+          },
+          {
+            "id": 7,
+            "imageUrl": "https://cdn.discordapp.com/attachments/1491034348948820034/1492653941547204699/MAP_IWPE_TODAY.png?ex=69dc1dcf&is=69dacc4f&hm=9463c08397ea3258f10002661dfb432e06e3012521690c802f93f4e0baa77476&",
+            "createdAt": 1775946923030
+          },
+          {
+            "id": 8,
+            "imageUrl": "https://cdn.discordapp.com/attachments/1491034348948820034/1492653941547204699/MAP_IWPE_TODAY.png?ex=69dc1dcf&is=69dacc4f&hm=9463c08397ea3258f10002661dfb432e06e3012521690c802f93f4e0baa77476&",
+            "createdAt": 1775946925452
+          },
+          {
+            "id": 9,
+            "imageUrl": "https://cdn.discordapp.com/attachments/1491034348948820034/1492653941547204699/MAP_IWPE_TODAY.png?ex=69dc1dcf&is=69dacc4f&hm=9463c08397ea3258f10002661dfb432e06e3012521690c802f93f4e0baa77476&",
+            "createdAt": 1775946927857
+          }
+        ],
+        "prioritised": [],
+        "lastWinningMapIds": [
+          8,
+          7
+        ],
+        "activeVote": null
+      }
+    },
+    "1466413372890157168": {
+      "Rise 6x": {
+        "maps": [
+          {
+            "id": 10,
+            "imageUrl": "https://cdn.discordapp.com/attachments/1489989200538505276/1495199568714006590/auroraraa.gif?ex=69e5609c&is=69e40f1c&hm=26ba022d51e4f1dadc7dddd76ca98a1582044b7f782f2c4f1d3f497d6d58ccea&",
+            "createdAt": 1776553764257
+          },
+          {
+            "id": 11,
+            "imageUrl": "https://cdn.discordapp.com/attachments/1489989200538505276/1495199567938064425/rise_main_logo.gif?ex=69e5609c&is=69e40f1c&hm=09d3ff5c94bcae86b7eef504ac3705f7d90a3414c94b3ff0865f7baa2cf2a107&",
+            "createdAt": 1776553778017
+          },
+          {
+            "id": 12,
+            "imageUrl": "https://cdn.discordapp.com/attachments/1489989200538505276/1495199568298508488/ChatGPT_Image_Apr_1_2026_05_37_42_PM.png?ex=69e5609c&is=69e40f1c&hm=cb3959b4f7a2bcfaa813525f40ff00af4474d9fd20b868779cb8d388640127bf&",
+            "createdAt": 1776553789434
+          },
+          {
+            "id": 13,
+            "imageUrl": "https://cdn.discordapp.com/attachments/1489989200538505276/1495199569120858212/AURORA_MAIN_LOGO.png?ex=69e5609c&is=69e40f1c&hm=8ed8bf37591312f1b83af2a0f40a1861d495a3d2de713931a8b7f0ee7353446d&",
+            "createdAt": 1776553799371
+          }
+        ],
+        "prioritised": [],
+        "lastWinningMapIds": [
+          13
+        ],
+        "activeVote": null
+      }
+    }
+  },
+  "meta": {
+    "nextMapId": 14
+  }
+}

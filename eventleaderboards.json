@@ -1,0 +1,47 @@
+{
+  "1490706543941914785": {
+    "Rise 6x": {
+      "totals": {
+        "byClan": {
+          "1490810767274934342": {
+            "points": 1,
+            "kills": 0,
+            "wins": 1
+          },
+          "1491034345878589502": {
+            "points": 5,
+            "kills": 0,
+            "wins": 5
+          }
+        },
+        "totalEventKills": 0
+      },
+      "events": {
+        "KOTH": {
+          "byClan": {
+            "1490810767274934342": {
+              "points": 1,
+              "kills": 0,
+              "wins": 1
+            },
+            "1491034345878589502": {
+              "points": 5,
+              "kills": 0,
+              "wins": 5
+            }
+          }
+        },
+        "NUKETOWN": {
+          "byClan": {}
+        },
+        "MAZE": {
+          "byClan": {}
+        },
+        "CAPTURE ZONE": {
+          "byClan": {}
+        }
+      },
+      "updatedAt": 1775684547603
+    }
+  }
+}

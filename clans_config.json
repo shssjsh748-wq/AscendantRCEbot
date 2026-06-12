@@ -1,0 +1,24 @@
+{
+  "1490706543941914785": {
+    "Rise 18x": {
+      "type": "default",
+      "requestChannelId": null,
+      "setAt": 1775486085475,
+      "setBy": "1431760554032238805"
+    },
+    "Rise 6x": {
+      "type": "default",
+      "requestChannelId": null,
+      "setAt": 1775507355363,
+      "setBy": "1431760554032238805"
+    }
+  },
+  "1511847599869661365": {
+    "Ascendant 5x": {
+      "type": "advanced",
+      "requestChannelId": "1511847599869661368",
+      "setAt": 1781206607391,
+      "setBy": "1333594958006976614"
+    }
+  }
+}
