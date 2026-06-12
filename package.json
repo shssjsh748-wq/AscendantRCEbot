@@ -1,0 +1,14 @@
+{
+  "name": "ascendant-rce-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for managing game servers via RCON",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.5.0",
+    "rce.js": "^3.1.2"
+  }
+}
