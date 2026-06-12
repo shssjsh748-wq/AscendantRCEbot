@@ -7,11 +7,11 @@ const {
   ButtonStyle,
 } = require("discord.js");
 
-const { listServers, getServer, rce } = require("../rce");
+const { listServers, getServer, rce } = require("./rce");
 
-const DATA_PATH = path.join(__dirname, "..", "data", "queueskip_data.json");
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const { readLinks } = require("../shared/links");
+const DATA_PATH = path.join(__dirname, "queueskip_data.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const { readLinks } = require("./links");
 
 function readJsonSafe(file, fallback) {
   try {

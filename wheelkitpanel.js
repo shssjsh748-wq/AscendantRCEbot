@@ -10,13 +10,13 @@ const {
   MessageFlags,
 } = require("discord.js");
 
-const { listServers, getServer } = require("../rce");
+const { listServers, getServer } = require("./rce");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const WHEELKITS_PANEL_PATH = path.join(__dirname, "..", "data", "wheelkits_panel.json");
-const WHEELKITS_CFG_PATH = path.join(__dirname, "..", "data", "wheelkits_config.json");
-const WHEELKITS_COOLDOWNS_PATH = path.join(__dirname, "..", "data", "wheelkits_cooldowns.json");
-const EMOTES_PATH = path.join(__dirname, "..", "data", "emotes.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const WHEELKITS_PANEL_PATH = path.join(__dirname, "wheelkits_panel.json");
+const WHEELKITS_CFG_PATH = path.join(__dirname, "wheelkits_config.json");
+const WHEELKITS_COOLDOWNS_PATH = path.join(__dirname, "wheelkits_cooldowns.json");
+const EMOTES_PATH = path.join(__dirname, "emotes.json");
 
 function log(...a) {
   console.log("[wheelkitspanel]", ...a);

@@ -11,10 +11,10 @@ const {
   ActionRowBuilder,
 } = require("discord.js");
 
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 
-const CLANS_PATH = path.join(__dirname, "..", "data", "clans.json");
-const MILESTONES_PATH = path.join(__dirname, "..", "data", "clan_milestones.json");
+const CLANS_PATH = path.join(__dirname, "clans.json");
+const MILESTONES_PATH = path.join(__dirname, "clan_milestones.json");
 
 const ROLE_COLORS = {
   RED: 0xed4245,

@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const KILLS_PATH = path.join(__dirname, "..", "..", "global-data", "kills.json");
+const KILLS_PATH = path.join(__dirname, "kills.json");
 
 function readJsonSafe(file, fallback) {
   try {

@@ -10,9 +10,9 @@
 const fs = require("fs");
 const path = require("path");
 
-const { listServers } = require("../rce"); 
+const { listServers } = require("./rce"); 
 
-const { readPlaytime, writePlaytime } = require("../shared/playtime");
+const { readPlaytime, writePlaytime } = require("./playtime");
 
 let writeChain = Promise.resolve();
 function queueWrite(fn) {

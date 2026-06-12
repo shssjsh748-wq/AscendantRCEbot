@@ -12,8 +12,8 @@ const {
   ChannelType,
 } = require("discord.js");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const CLANS_PATH = path.join(__dirname, "..", "data", "clans.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const CLANS_PATH = path.join(__dirname, "clans.json");
 
 function readJsonSafe(file, fallback) {
   try {

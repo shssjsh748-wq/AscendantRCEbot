@@ -10,11 +10,11 @@ const {
   ChannelType,
 } = require("discord.js");
 
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 
-const LEADERBOARD_PATH = path.join(__dirname, "..", "data", "eventleaderboards.json");
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const HUBS_PATH = path.join(__dirname, "..", "data", "eventleaderboard_hubs.json");
+const LEADERBOARD_PATH = path.join(__dirname, "eventleaderboards.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const HUBS_PATH = path.join(__dirname, "eventleaderboard_hubs.json");
 
 const EVENT_NAMES = ["KOTH", "NUKETOWN", "MAZE", "CAPTURE ZONE"];
 

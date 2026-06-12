@@ -16,9 +16,9 @@ const {
 
 const { sendConfiguredLog } = require("./rcelogs");
 
-const CONFIG_PATH = path.join(__dirname, "..", "data", "link_config.json");
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const { readLinks, writeLinks } = require("../shared/links");
+const CONFIG_PATH = path.join(__dirname, "link_config.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const { readLinks, writeLinks } = require("./links");
 
 const pending = new Map(); // userId -> { gamertag, guildId }
 

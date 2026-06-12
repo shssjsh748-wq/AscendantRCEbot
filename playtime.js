@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const PLAYTIME_PATH = path.join(__dirname, "..", "..", "global-data", "playtime.json");
+const PLAYTIME_PATH = path.join(__dirname, "playtime.json");
 
 function readJsonSafe(file, fallback) {
   try {

@@ -3,17 +3,17 @@ const path = require("path");
 
 const { ContainerBuilder, MessageFlags, EmbedBuilder } = require("discord.js");
 
-const { listServers, getServer } = require("../rce");
+const { listServers, getServer } = require("./rce");
 const { sendConfiguredLog } = require("./rcelogs");
 
-const KITS_CFG_PATH = path.join(__dirname, "..", "data", "kits_config.json");
-const COOLDOWNS_PATH = path.join(__dirname, "..", "data", "kits_cooldowns.json");
-const BOT_STATS_PATH = path.join(__dirname, "..", "data", "bot_stats.json");
-const { readLinks } = require("../shared/links");
+const KITS_CFG_PATH = path.join(__dirname, "kits_config.json");
+const COOLDOWNS_PATH = path.join(__dirname, "kits_cooldowns.json");
+const BOT_STATS_PATH = path.join(__dirname, "bot_stats.json");
+const { readLinks } = require("./links");
 const LINK_FILES = [
-  path.join(__dirname, "..", "data", "linking.json"),
-  path.join(__dirname, "..", "data", "linked.json"),
-  path.join(__dirname, "..", "data", "accounts.json"),
+  path.join(__dirname, "linking.json"),
+  path.join(__dirname, "linked.json"),
+  path.join(__dirname, "accounts.json"),
 ];
 
 function log(...a) {

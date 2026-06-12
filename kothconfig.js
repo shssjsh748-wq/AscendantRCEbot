@@ -14,11 +14,11 @@ const {
   TextInputStyle,
 } = require("discord.js");
 
-const { listServers } = require("../../rce");
-const { readLinks } = require("../../shared/links");
-const ROLES_PATH = path.join(__dirname, "..", "..", "data", "roles.json");
-const SPAWNS_PATH = path.join(__dirname, "..", "..", "data", "kothspawns.json");
-const ADV_PATH = path.join(__dirname, "..", "..", "data", "kothadvanced.json");
+const { listServers } = require("./rce");
+const { readLinks } = require("./links");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const SPAWNS_PATH = path.join(__dirname, "kothspawns.json");
+const ADV_PATH = path.join(__dirname, "kothadvanced.json");
 
 const activePanels = new Map(); // messageId -> state
 

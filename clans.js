@@ -2,10 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const { MessageFlags, PermissionFlagsBits } = require("discord.js");
 
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const CLANS_CFG_PATH = path.join(__dirname, "..", "data", "clans_config.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const CLANS_CFG_PATH = path.join(__dirname, "clans_config.json");
 
 function readJsonSafe(file, fallback) {
   try {

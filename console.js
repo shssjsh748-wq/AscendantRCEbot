@@ -4,7 +4,7 @@ const { EmbedBuilder, MessageFlags } = require("discord.js");
 const { RCEEvent } = require("rce.js");
 const { sendConfiguredLog } = require("./rcelogs");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
 
 function readJsonSafe(file, fallback) {
   try {
@@ -225,7 +225,7 @@ module.exports = {
         if (interaction.isAutocomplete() && interaction.commandName === "console") {
           const focused = interaction.options.getFocused(true);
           if (focused.name === "server") {
-            const { listServers } = require("../rce");
+            const { listServers } = require("./rce");
             const q = norm(focused.value);
             const choices = listServers()
               .map((s) => ({
@@ -265,7 +265,7 @@ module.exports = {
           await interaction.reply({ embeds: [denyEmbed] }).catch(() => {});
 
           // Log the denied attempt
-          const { listServers } = require("../rce");
+          const { listServers } = require("./rce");
           const allServers = listServers();
           const matchedServer = allServers.find((s) => s.identifier === serverId);
           if (matchedServer) {
@@ -288,7 +288,7 @@ module.exports = {
         }
 
         // ── Find server ──────────────────────────────────────────────────────
-        const { listServers } = require("../rce");
+        const { listServers } = require("./rce");
         const allServers = listServers();
         const matchedServer = allServers.find((s) => s.identifier === serverId);
 
@@ -370,7 +370,7 @@ module.exports = {
         const serverDisplayName = parseFirstLine(lines[0]);
         const commands = lines.slice(1).filter(Boolean);
 
-        const { listServers } = require("../rce");
+        const { listServers } = require("./rce");
         const allServers = listServers();
 
         let matchedServer = null;

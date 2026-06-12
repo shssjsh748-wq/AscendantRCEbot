@@ -10,9 +10,9 @@ const {
   ChannelType,
 } = require("discord.js");
 
-const { listServers, getServer, rce } = require("../rce");
+const { listServers, getServer, rce } = require("./rce");
 
-const CFG_PATH = path.join(__dirname, "..", "data", "poptracker_config.json");
+const CFG_PATH = path.join(__dirname, "poptracker_config.json");
 const POLL_MS = 5000;
 
 function readJsonSafe(file, fallback) {
@@ -50,7 +50,7 @@ function ensure(obj, ...keys) {
 }
 
 function getRoleConfig() {
-  return readJsonSafe(path.join(__dirname, "..", "roles.json"), {});
+  return readJsonSafe(path.join(__dirname, "roles.json"), {});
 }
 
 function isOwner(member) {

@@ -2,10 +2,10 @@
 const fs = require("fs");
 const path = require("path");
 const { ContainerBuilder, MessageFlags, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { listServers } = require("../rce");
-const { readLinks } = require("../shared/links");
-const CLANS_PATH = path.join(__dirname, "..", "data", "clans.json");
-const HOMES_PATH = path.join(__dirname, "..", "data", "eventhomes.json");
+const { listServers } = require("./rce");
+const { readLinks } = require("./links");
+const CLANS_PATH = path.join(__dirname, "clans.json");
+const HOMES_PATH = path.join(__dirname, "eventhomes.json");
 
 const activePanels = new Map(); // messageId -> { ownerId,guildId,serverId,clanRoleId,playerName }
 

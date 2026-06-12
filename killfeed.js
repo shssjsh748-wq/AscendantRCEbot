@@ -6,13 +6,13 @@ const {
   PermissionFlagsBits,
 } = require("discord.js");
 const { RCEEvent } = require("rce.js");
-const { listServers, getServer } = require("../rce");
+const { listServers, getServer } = require("./rce");
 const { readRoles } = require("./roles");
 
-const CONFIG_PATH = path.join(__dirname, "..", "data", "killfeed_config.json");
-const FEED_PATH = path.join(__dirname, "..", "data", "killfeed.json");
-const BANS_PATH = path.join(__dirname, "..", "data", "killfeedbans.json");
-const REPLACE_PATH = path.join(__dirname, "..", "data", "killfeednamereplace.json");
+const CONFIG_PATH = path.join(__dirname, "killfeed_config.json");
+const FEED_PATH = path.join(__dirname, "killfeed.json");
+const BANS_PATH = path.join(__dirname, "killfeedbans.json");
+const REPLACE_PATH = path.join(__dirname, "killfeednamereplace.json");
 
 function ensureFile(file, fallback) {
   try {

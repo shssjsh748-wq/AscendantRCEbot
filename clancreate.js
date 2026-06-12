@@ -15,12 +15,12 @@ const {
   TextInputStyle,
 } = require("discord.js");
 
-const { listServers, getServer } = require("../rce");
+const { listServers, getServer } = require("./rce");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const CLANS_CFG_PATH = path.join(__dirname, "..", "data", "clans_config.json");
-const CLANS_PATH = path.join(__dirname, "..", "data", "clans.json");
-const REQ_PATH = path.join(__dirname, "..", "data", "clan_requests.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const CLANS_CFG_PATH = path.join(__dirname, "clans_config.json");
+const CLANS_PATH = path.join(__dirname, "clans.json");
+const REQ_PATH = path.join(__dirname, "clan_requests.json");
 
 const pendingCreate = new Map(); // userId -> { serverId, clanName, tag, colorKey, originChannelId, createdAt }
 const pendingEdit = new Map(); // userId -> { serverId, createdAt }

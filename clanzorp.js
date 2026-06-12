@@ -9,12 +9,12 @@ const {
   PermissionFlagsBits,
 } = require("discord.js");
 
-const { listServers, getServer } = require("../rce");
+const { listServers, getServer } = require("./rce");
 
-const { readLinks } = require("../shared/links");
-const CLANS_PATH = path.join(__dirname, "..", "data", "clans.json");
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const ZORP_PATH = path.join(__dirname, "..", "data", "clan_zorp.json");
+const { readLinks } = require("./links");
+const CLANS_PATH = path.join(__dirname, "clans.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const ZORP_PATH = path.join(__dirname, "clan_zorp.json");
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVW";
 const GRID_MIN_X = -1750;

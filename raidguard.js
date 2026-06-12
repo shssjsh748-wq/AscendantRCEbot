@@ -7,13 +7,13 @@ const {
 } = require("discord.js");
 const { RCEEvent } = require("rce.js");
 
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 
-const CFG_PATH = path.join(__dirname, "data", "rg-config.json");
-const BUBBLES_PATH = path.join(__dirname, "data", "rb-bubbles.json");
-const LINKS_PATH = path.join(__dirname, "..", "data", "links.json");
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const STATUS_PATH = path.join(__dirname, "..", "data", "server_status.json");
+const CFG_PATH = path.join(__dirname, "rg-config.json");
+const BUBBLES_PATH = path.join(__dirname, "rb-bubbles.json");
+const LINKS_PATH = path.join(__dirname, "links.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const STATUS_PATH = path.join(__dirname, "server_status.json");
 
 const COOLDOWN_MS = 10 * 60 * 1000;
 const MIN_BUBBLE_DISTANCE = 120;

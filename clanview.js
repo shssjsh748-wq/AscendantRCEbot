@@ -3,9 +3,9 @@ const fs = require("fs");
 const path = require("path");
 
 const { ContainerBuilder, MessageFlags } = require("discord.js");
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 
-const CLANS_PATH = path.join(__dirname, "..", "data", "clans.json");
+const CLANS_PATH = path.join(__dirname, "clans.json");
 
 function log(...args) {
   console.log("[clanview]", ...args);

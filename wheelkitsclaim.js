@@ -7,11 +7,11 @@ const path = require("path");
 const { EmbedBuilder } = require("discord.js");
 const { RCEEvent } = require("rce.js");
 
-const rceMod = require("../rce");
+const rceMod = require("./rce");
 const { sendConfiguredLog } = require("./rcelogs");
 
-const WHEELKITS_CFG_PATH = path.join(__dirname, "..", "data", "wheelkits_config.json");
-const COOLDOWNS_PATH = path.join(__dirname, "..", "data", "wheelkits_cooldowns.json");
+const WHEELKITS_CFG_PATH = path.join(__dirname, "wheelkits_config.json");
+const COOLDOWNS_PATH = path.join(__dirname, "wheelkits_cooldowns.json");
 
 function log(...a) {
   console.log("[wheelkitsclaim]", ...a);

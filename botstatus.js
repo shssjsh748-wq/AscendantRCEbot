@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const { ActivityType } = require("discord.js");
 
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 
-const STATS_PATH = path.join(__dirname, "..", "data", "bot_stats.json");
+const STATS_PATH = path.join(__dirname, "bot_stats.json");
 
 let writeChain = Promise.resolve();
 

@@ -11,10 +11,10 @@ const {
   MessageFlags,
 } = require("discord.js");
 
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 const { sendConfiguredLog } = require("./rcelogs");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
 
 function readRoles() {
   try {

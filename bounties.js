@@ -7,11 +7,11 @@ const {
   TextDisplayBuilder,
 } = require("discord.js");
 
-const { listServers, getServer } = require("../rce");
+const { listServers, getServer } = require("./rce");
 
-const CFG_PATH = path.join(__dirname, "..", "data", "bounties_config.json");
-const DATA_PATH = path.join(__dirname, "..", "data", "bounties_data.json");
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
+const CFG_PATH = path.join(__dirname, "bounties_config.json");
+const DATA_PATH = path.join(__dirname, "bounties_data.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
 
 function readJsonSafe(file, fallback) {
   try {

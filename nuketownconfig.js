@@ -14,11 +14,11 @@ const {
   TextInputStyle,
 } = require("discord.js");
 
-const { listServers } = require("../../rce");
-const { readLinks } = require("../../shared/links");
-const ROLES_PATH = path.join(__dirname, "..", "..", "data", "roles.json");
-const SPAWNS_PATH = path.join(__dirname, "..", "..", "data", "nuketownspawns.json");
-const ADV_PATH = path.join(__dirname, "..", "..", "data", "nuketownadvanced.json");
+const { listServers } = require("./rce");
+const { readLinks } = require("./links");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const SPAWNS_PATH = path.join(__dirname, "nuketownspawns.json");
+const ADV_PATH = path.join(__dirname, "nuketownadvanced.json");
 
 const BLUE = 0x95a5a6;
 const activePanels = new Map(); // messageId -> state

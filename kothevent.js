@@ -11,16 +11,16 @@ const {
 } = require("discord.js");
 
 const { RCEEvent } = require("rce.js");
-const { listServers } = require("../../rce");
-const { refreshLeaderboardHub } = require("../eventleaderboard");
-const { readLinks } = require("../../shared/links");
-const ROLES_PATH = path.join(__dirname, "..", "..", "data", "roles.json");
-const CLANS_PATH = path.join(__dirname, "..", "..", "data", "clans.json");
-const SPAWNS_PATH = path.join(__dirname, "..", "..", "data", "kothspawns.json");
-const ADV_PATH = path.join(__dirname, "..", "..", "data", "kothadvanced.json");
-const EVENTS_PATH = path.join(__dirname, "..", "..", "data", "kothevents.json");
-const EVENTHOMES_PATH = path.join(__dirname, "..", "..", "data", "eventhomes.json");
-const LEADERBOARD_PATH = path.join(__dirname, "..", "..", "data", "eventleaderboards.json");
+const { listServers } = require("./rce");
+const { refreshLeaderboardHub } = require("./eventleaderboard");
+const { readLinks } = require("./links");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const CLANS_PATH = path.join(__dirname, "clans.json");
+const SPAWNS_PATH = path.join(__dirname, "kothspawns.json");
+const ADV_PATH = path.join(__dirname, "kothadvanced.json");
+const EVENTS_PATH = path.join(__dirname, "kothevents.json");
+const EVENTHOMES_PATH = path.join(__dirname, "eventhomes.json");
+const LEADERBOARD_PATH = path.join(__dirname, "eventleaderboards.json");
 
 const ORANGE = 0xfaa61a;
 const GREEN = 0x57f287;

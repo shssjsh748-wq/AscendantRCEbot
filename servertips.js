@@ -2,10 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const { MessageFlags, EmbedBuilder } = require("discord.js");
 const { RCEEvent } = require("rce.js");
-const { listServers, getServer } = require("../rce");
+const { listServers, getServer } = require("./rce");
 
-const CFG_PATH = path.join(__dirname, "..", "data", "zonetext.json");
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
+const CFG_PATH = path.join(__dirname, "zonetext.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
 
 function log(...a) {
   console.log("[zonetext/servertips]", ...a);

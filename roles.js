@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { EmbedBuilder, PermissionFlagsBits, MessageFlags } = require("discord.js");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
 
 function readRoles() {
   try {

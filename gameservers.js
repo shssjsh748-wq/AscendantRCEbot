@@ -18,7 +18,7 @@ const {
   addServerToRCE,
   removeServerFromRCE,
   testRCONConnection,
-} = require("../rce");
+} = require("./rce");
 
 function sleep(ms) {
   return new Promise((res) => setTimeout(res, ms));

@@ -10,11 +10,11 @@ const {
   MessageFlags,
 } = require("discord.js");
 
-const { listServers, getServer } = require("../rce");
+const { listServers, getServer } = require("./rce");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const KITS_PANEL_PATH = path.join(__dirname, "..", "data", "kits_panel.json");
-const KITS_CFG_PATH = path.join(__dirname, "..", "data", "kits_config.json"); // reads configured kits
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const KITS_PANEL_PATH = path.join(__dirname, "kits_panel.json");
+const KITS_CFG_PATH = path.join(__dirname, "kits_config.json"); // reads configured kits
 
 function log(...a) { console.log("[kitpanel]", ...a); }
 function logErr(...a) { console.error("[kitpanel]", ...a); }

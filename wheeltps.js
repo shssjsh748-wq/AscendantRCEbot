@@ -3,10 +3,10 @@ const fs = require("fs");
 const path = require("path");
 
 const { MessageFlags, PermissionFlagsBits } = require("discord.js");
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const WHEELTPS_CFG_PATH = path.join(__dirname, "..", "data", "wheeltps_config.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const WHEELTPS_CFG_PATH = path.join(__dirname, "wheeltps_config.json");
 
 function log(...a) { console.log("[wheeltps]", ...a); }
 function logErr(...a) { console.error("[wheeltps]", ...a); }

@@ -13,7 +13,7 @@ const fs = require("fs");
 const path = require("path");
 const { RCEEvent } = require("rce.js");
 
-const COMBATLOCK_PATH = path.join(__dirname, "..", "data", "combatlock.json");
+const COMBATLOCK_PATH = path.join(__dirname, "combatlock.json");
 const DURATION_MS = 60 * 1000;
 
 let writeChain = Promise.resolve();

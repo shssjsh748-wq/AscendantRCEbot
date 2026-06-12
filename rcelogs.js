@@ -11,10 +11,10 @@ const {
 } = require("discord.js");
 const { RCEEvent } = require("rce.js");
 
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const CFG_PATH = path.join(__dirname, "..", "data", "rce_logs.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const CFG_PATH = path.join(__dirname, "rce_logs.json");
 
 const GLOBAL_KEY = "_global";
 const downAlerts = new Map();

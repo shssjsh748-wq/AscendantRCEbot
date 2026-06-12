@@ -4,7 +4,7 @@ const path = require("path");
 
 const { MessageFlags } = require("discord.js");
 
-const EMOTES_PATH = path.join(__dirname, "..", "data", "emotes.json");
+const EMOTES_PATH = path.join(__dirname, "emotes.json");
 
 function log(...a) { console.log("[developer]", ...a); }
 function logErr(...a) { console.error("[developer]", ...a); }

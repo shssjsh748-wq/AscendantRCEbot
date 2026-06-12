@@ -3,7 +3,7 @@ const path = require("path");
 
 const { default: RCEManager, LogLevel, RCEIntent } = require("rce.js");
 
-const SERVERS_PATH = path.join(__dirname, "data", "servers.json");
+const SERVERS_PATH = path.join(__dirname, "servers.json");
 
 const rce = new RCEManager({
   logger: { level: LogLevel.Error },

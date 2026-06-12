@@ -2,10 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const { EmbedBuilder } = require("discord.js");
 
-const { listServers, getServer } = require("../rce");
+const { listServers, getServer } = require("./rce");
 
-const { readLinks } = require("../shared/links");
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
+const { readLinks } = require("./links");
+const ROLES_PATH = path.join(__dirname, "roles.json");
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVW";
 const GRID_MIN_X = -1750;

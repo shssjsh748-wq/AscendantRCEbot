@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const FILE = path.join(__dirname, "data", "../server_status.json");
+const FILE = path.join(__dirname, "/server_status.json");
 const POLL_MS = 30000;
 
 function read() {
@@ -23,7 +23,7 @@ module.exports = {
   name: "serverstatus",
 
   init(client, rce) {
-    const { listServers } = require("../rce");
+    const { listServers } = require("./rce");
     const data = read();
     let running = false;
 

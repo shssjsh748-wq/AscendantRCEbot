@@ -10,9 +10,9 @@ const fs = require("fs");
 const path = require("path");
 const { RCEEvent } = require("rce.js");
 
-const { readKills, writeKills } = require("../shared/kills");
-const KILLBANS_PATH = path.join(__dirname, "..", "data", "killbans.json"); // names-only blacklist
-const KILLPAIRBANS_PATH = path.join(__dirname, "..", "data", "killpairbans.json"); // auto farm blocks (persist)
+const { readKills, writeKills } = require("./kills");
+const KILLBANS_PATH = path.join(__dirname, "killbans.json"); // names-only blacklist
+const KILLPAIRBANS_PATH = path.join(__dirname, "killpairbans.json"); // auto farm blocks (persist)
 
 const WINDOW_MS = 30 * 60 * 1000; // 30 minutes
 const THRESHOLD = 10; // more than 10

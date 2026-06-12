@@ -6,17 +6,17 @@ const fs = require("fs");
 const path = require("path");
 const { EmbedBuilder, MessageFlags } = require("discord.js");
 
-const rceMod = require("../rce");
+const rceMod = require("./rce");
 const { listServers } = rceMod;
-const { readPlaytime } = require("../shared/playtime");
-const CLANS_PATH = path.join(__dirname, "..", "data", "clans.json");
-const { readLinks } = require("../shared/links");
-const { readKills } = require("../shared/kills");
+const { readPlaytime } = require("./playtime");
+const CLANS_PATH = path.join(__dirname, "clans.json");
+const { readLinks } = require("./links");
+const { readKills } = require("./kills");
 // linking files (same idea as tp.js)
 const LINKING_CANDIDATES = [
-  path.join(__dirname, "..", "data", "linking.json"),
-  path.join(__dirname, "..", "data", "linked.json"),
-  path.join(__dirname, "..", "data", "link_config.json"),
+  path.join(__dirname, "linking.json"),
+  path.join(__dirname, "linked.json"),
+  path.join(__dirname, "link_config.json"),
 ];
 
 function readJsonSafe(file, fallback) {

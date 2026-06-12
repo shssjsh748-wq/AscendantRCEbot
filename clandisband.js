@@ -11,9 +11,9 @@ const {
   ChannelType,
 } = require("discord.js");
 
-const { listServers } = require("../rce");
+const { listServers } = require("./rce");
 
-const CLANS_PATH = path.join(__dirname, "..", "data", "clans.json");
+const CLANS_PATH = path.join(__dirname, "clans.json");
 
 const ROLE_COLORS = {
   RED: 0xed4245,

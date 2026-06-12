@@ -1,9 +1,9 @@
 // modules/whois.js — /whois
 const { EmbedBuilder, MessageFlags } = require("discord.js");
-const { listServers } = require("../rce");
-const { readLinks } = require("../shared/links");
-const { readKills } = require("../shared/kills");
-const { readPlaytime } = require("../shared/playtime");
+const { listServers } = require("./rce");
+const { readLinks } = require("./links");
+const { readKills } = require("./kills");
+const { readPlaytime } = require("./playtime");
 
 function log(...a) { console.log("[whois]", ...a); }
 function logErr(...a) { console.error("[whois]", ...a); }

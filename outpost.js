@@ -1,13 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 const { EmbedBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder } = require("discord.js");
-const { listServers, getServer, rce } = require("../rce");
+const { listServers, getServer, rce } = require("./rce");
 
-const CFG_PATH = path.join(__dirname, "..", "data", "outpost_config.json");
-const CD_PATH = path.join(__dirname, "..", "data", "outpost_cooldowns.json");
-const { readLinks } = require("../shared/links");
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
-const COMBATLOCK_PATH = path.join(__dirname, "..", "data", "combatlock.json");
+const CFG_PATH = path.join(__dirname, "outpost_config.json");
+const CD_PATH = path.join(__dirname, "outpost_cooldowns.json");
+const { readLinks } = require("./links");
+const ROLES_PATH = path.join(__dirname, "roles.json");
+const COMBATLOCK_PATH = path.join(__dirname, "combatlock.json");
 
 const pendingManual = new Map();
 

@@ -11,10 +11,10 @@ const {
   TextDisplayBuilder,
 } = require("discord.js");
 
-const { listServers, getServer } = require("../rce");
-const { readRoles } = require("../modules/roles");
+const { listServers, getServer } = require("./rce");
+const { readRoles } = require("./roles");
 
-const MAPS_PATH = path.join(__dirname, "..", "data", "maps.json");
+const MAPS_PATH = path.join(__dirname, "maps.json");
 const ACCENT = 0x95a5a6;
 
 function ensureMapsFile() {

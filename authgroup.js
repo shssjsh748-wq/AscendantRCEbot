@@ -3,10 +3,10 @@ const fs = require("fs");
 const path = require("path");
 
 const { EmbedBuilder, MessageFlags, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { listServers, rce } = require("../rce");
-const { readLinks } = require("../shared/links");
+const { listServers, rce } = require("./rce");
+const { readLinks } = require("./links");
 
-const ROLES_PATH = path.join(__dirname, "..", "data", "roles.json");
+const ROLES_PATH = path.join(__dirname, "roles.json");
 
 function log(...a) { console.log("[authgroup]", ...a); }
 function logErr(...a) { console.error("[authgroup]", ...a); }
