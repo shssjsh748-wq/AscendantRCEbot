@@ -1,0 +1,20 @@
+{
+  "Rise 2x": {
+    "online": false,
+    "lastChecked": 1781165188010,
+    "lastChange": 1781161891623,
+    "lastError": null
+  },
+  "Rise 6x": {
+    "online": false,
+    "lastChecked": 1781165188011,
+    "lastChange": 1781161891638,
+    "lastError": null
+  },
+  "Ascendant 5x": {
+    "online": true,
+    "lastChecked": 1781243991970,
+    "lastChange": 1781243030126,
+    "lastError": null
+  }
+}
