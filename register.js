@@ -47,6 +47,32 @@ const commands = [
     )
     .toJSON(),
 
+  new SlashCommandBuilder()
+    .setName("timed-say")
+    .setDescription("Send a repeating message to a server chat")
+    .addStringOption((opt) =>
+      opt
+        .setName("server")
+        .setDescription("Pick a server")
+        .setRequired(true)
+        .setAutocomplete(true)
+    )
+    .addStringOption((opt) =>
+      opt
+        .setName("message")
+        .setDescription("Message to send in-game")
+        .setRequired(true)
+    )
+    .addIntegerOption((opt) =>
+      opt
+        .setName("minutes")
+        .setDescription("How often to send the message (in minutes)")
+        .setRequired(true)
+        .setMinValue(1)
+        .setMaxValue(1440)
+    )
+    .toJSON(),
+
     new SlashCommandBuilder()
   .setName("event-config")
   .setDescription("Event configuration")

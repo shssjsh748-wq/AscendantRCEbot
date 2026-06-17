@@ -196,11 +196,18 @@ function buildSlashSuccessEmbed(serverName, command, success) {
   return embed;
 }
 
+function escapeSayText(text) {
+  return String(text || "")
+    .replace(/\\/g, "\\\\")
+    .replace(/"/g, '\\"');
+}
+
 module.exports = {
   name: "console",
 
   init(client, rce) {
     const recentConsole = new Map();
+    const timedSayTimers = new Map();
 
     // ── RCE message listener (shared by both !console and /console) ──────────
     if (rce && typeof rce.on === "function") {
@@ -222,24 +229,111 @@ module.exports = {
     client.on("interactionCreate", async (interaction) => {
       try {
         // Autocomplete for server option
-        if (interaction.isAutocomplete() && interaction.commandName === "console") {
-          const focused = interaction.options.getFocused(true);
-          if (focused.name === "server") {
-            const { listServers } = require("./rce");
-            const q = norm(focused.value);
-            const choices = listServers()
-              .map((s) => ({
-                name: (s.displayName || s.identifier).slice(0, 100),
-                value: s.identifier,
-              }))
-              .filter((c) => c.name.toLowerCase().includes(q))
-              .slice(0, 25);
-            await interaction.respond(choices).catch(() => {});
+        if (interaction.isAutocomplete()) {
+          if (interaction.commandName === "console" || interaction.commandName === "timed-say") {
+            const focused = interaction.options.getFocused(true);
+            if (focused.name === "server") {
+              const { listServers } = require("./rce");
+              const q = norm(focused.value);
+              const choices = listServers()
+                .map((s) => ({
+                  name: (s.displayName || s.identifier).slice(0, 100),
+                  value: s.identifier,
+                }))
+                .filter((c) => c.name.toLowerCase().includes(q))
+                .slice(0, 25);
+              await interaction.respond(choices).catch(() => {});
+            }
           }
           return;
         }
 
         if (!interaction.isChatInputCommand()) return;
+
+        if (interaction.commandName === "timed-say") {
+          if (!interaction.inGuild()) {
+            return interaction.reply({ content: "Use this in a server.", flags: MessageFlags.Ephemeral }).catch(() => {});
+          }
+
+          const member =
+            interaction.member ||
+            (await interaction.guild.members.fetch(interaction.user.id).catch(() => null));
+
+          if (!hasConsoleAccess(member)) {
+            const roleName = getRoleNames(interaction.guild);
+            return interaction
+              .reply({
+                content: `You must have the \`${roleName}\` role to use this command!`,
+                flags: MessageFlags.Ephemeral,
+              })
+              .catch(() => {});
+          }
+
+          const serverId = interaction.options.getString("server", true);
+          const message = interaction.options.getString("message", true).trim();
+          const minutes = interaction.options.getInteger("minutes", true);
+          const { listServers } = require("./rce");
+          const allServers = listServers();
+          const matchedServer = allServers.find((s) => s.identifier === serverId);
+
+          if (!matchedServer) {
+            return interaction.reply({ content: ":x: Server not found.", flags: MessageFlags.Ephemeral }).catch(() => {});
+          }
+
+          const serverName = matchedServer.displayName || matchedServer.identifier;
+          const commandText = `say "${escapeSayText(message)}"`;
+
+          try {
+            await rce.sendCommand(matchedServer.identifier, commandText);
+          } catch (e) {
+            console.error("[timed-say] send error:", e);
+            return interaction.reply({ content: "Error sending test message.", flags: MessageFlags.Ephemeral }).catch(() => {});
+          }
+
+          const key = `${interaction.guildId}:${matchedServer.identifier}`;
+          const existing = timedSayTimers.get(key);
+          if (existing?.timer) clearInterval(existing.timer);
+
+          const intervalMs = Math.max(60_000, Math.floor(minutes) * 60_000);
+          const timer = setInterval(async () => {
+            try {
+              await rce.sendCommand(matchedServer.identifier, commandText);
+            } catch (e) {
+              console.error("[timed-say] interval error:", e);
+            }
+          }, intervalMs);
+
+          timedSayTimers.set(key, {
+            timer,
+            message,
+            minutes,
+            serverId: matchedServer.identifier,
+          });
+
+          await interaction
+            .reply({
+              content: `✅ Timed say enabled for **${serverName}**. The message will repeat every **${minutes}** minute(s).`,
+              flags: MessageFlags.Ephemeral,
+            })
+            .catch(() => {});
+
+          await sendConsoleLog(client, interaction.guildId, matchedServer.identifier, {
+            embeds: [
+              buildLogEmbed({
+                author: interaction.user,
+                serverName,
+                commands: [commandText],
+                success: true,
+                successCount: 1,
+                failCount: 0,
+                reason: `Timed say scheduled every ${minutes} minute(s)`,
+                failedRows: [],
+              }),
+            ],
+          }).catch(() => {});
+          return;
+        }
+
         if (interaction.commandName !== "console") return;
         if (!interaction.inGuild()) {
           return interaction.reply({ content: "Use this in a server.", ephemeral: true }).catch(() => {});
