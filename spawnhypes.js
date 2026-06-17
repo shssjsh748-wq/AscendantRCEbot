@@ -257,7 +257,7 @@ function buildSpawnCommand(p) {
 function successEmbed({ grid, serverDisplay, count }) {
   return new EmbedBuilder()
     .setColor(0x95a5a6)
-    .setTitle("Ascendant Art Spawned")
+    .setTitle("Vertex Art Spawned")
     .addFields(
       { name: "Grid", value: `\`${grid}\``, inline: true },
       { name: "Server", value: `\`${serverDisplay}\``, inline: true },

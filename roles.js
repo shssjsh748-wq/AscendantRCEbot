@@ -33,7 +33,7 @@ function successEmbed({ consoleRoleId, adminRoleId, ownerRoleId }) {
 > • Admin Role: <@&${adminRoleId}>
 > • Owner Role: <@&${ownerRoleId}>`
     )
-    .setFooter({ text: "Ascendant | Roles Configured" })
+    .setFooter({ text: "Vertex | Roles Configured" })
     .setTimestamp(new Date());
 
   return e;

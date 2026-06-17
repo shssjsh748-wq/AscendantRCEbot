@@ -31,7 +31,7 @@ function isAdmin(interaction) {
 function prettyEmbedBase() {
   // footer text cannot be empty in discord.js
   return new EmbedBuilder()
-    .setFooter({ text: "Ascendant" })
+    .setFooter({ text: "Vertex" })
     .setTimestamp(new Date());
 }
 

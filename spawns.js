@@ -291,7 +291,7 @@ module.exports = {
               `> Coords: X:${fmtCoord(x)} Y:${fmtCoord(y)} Z:${fmtCoord(z)}\n\n` +
               `Spawning ${data.quantity} ${niceType}...`
           )
-          .setFooter({ text: "Ascendant | Entity Spawning" })
+          .setFooter({ text: "Vertex | Entity Spawning" })
           .setTimestamp(new Date());
 
         const msg = await interaction.channel.send({ embeds: [embed] });
@@ -348,7 +348,7 @@ module.exports = {
               `> Position: ${grid}\n` +
               `> Coords: X:${fmtCoord(x)} Y:${fmtCoord(y)} Z:${fmtCoord(z)}`
           )
-          .setFooter({ text: "Ascendant | Entity Spawning" })
+          .setFooter({ text: "Vertex | Entity Spawning" })
           .setTimestamp(new Date());
 
         await msg.edit({ embeds: [doneEmbed] });

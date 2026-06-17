@@ -139,7 +139,7 @@ async function flushKillfeedBatch(client, guildId, serverId) {
       .setTitle(`Recent kills - ${getServerDisplay(serverId)}`)
       .setDescription(desc)
       .setFooter({
-        text: `Ascendant | Latest 10 Kills`,
+        text: `Vertex | Latest 10 Kills`,
       })
       .setTimestamp();
 
