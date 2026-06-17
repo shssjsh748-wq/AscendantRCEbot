@@ -35,6 +35,10 @@ function stripAngleTags(str) {
   return String(str || "").replace(/<[^>]*>/g, "").trim();
 }
 
+function normalizeIdentifier(value) {
+  return String(value || "").trim().toLowerCase();
+}
+
 function parseServerInfoResponse(response) {
   const text = String(response ?? "");
   const start = text.indexOf("{");
@@ -130,38 +134,67 @@ function listServers() {
 }
 
 function getServer(identifier) {
-  return readServersFile().find((s) => s.identifier === identifier) || null;
+  const key = normalizeIdentifier(identifier);
+  return (
+    readServersFile().find((s) => normalizeIdentifier(s.identifier) === key || normalizeIdentifier(s.displayName) === key) ||
+    null
+  );
 }
 
 function saveServer(newServer) {
   const servers = readServersFile();
+  const nextServer = {
+    ...newServer,
+    identifier: String(newServer.identifier || "").trim(),
+    displayName: String(newServer.displayName || newServer.identifier || "").trim(),
+  };
 
   // prevent duplicates since identifier == displayName
-  if (servers.some((s) => s.identifier === newServer.identifier)) {
-    console.log("[servers.json] duplicate identifier, not saving:", newServer.identifier);
+  if (
+    servers.some(
+      (s) =>
+        normalizeIdentifier(s.identifier) === normalizeIdentifier(nextServer.identifier) ||
+        normalizeIdentifier(s.displayName) === normalizeIdentifier(nextServer.displayName)
+    )
+  ) {
+    console.log("[servers.json] duplicate identifier, not saving:", nextServer.identifier);
     return null;
   }
 
-  servers.push(newServer);
+  servers.push(nextServer);
   writeServersFile(servers);
-  console.log("[servers.json] saved:", newServer.identifier);
-  return newServer;
+  console.log("[servers.json] saved:", nextServer.identifier);
+  return nextServer;
 }
 
 function updateServer(identifier, patch) {
   const servers = readServersFile();
-  const idx = servers.findIndex((s) => s.identifier === identifier);
+  const key = normalizeIdentifier(identifier);
+  const idx = servers.findIndex(
+    (s) => normalizeIdentifier(s.identifier) === key || normalizeIdentifier(s.displayName) === key
+  );
   if (idx === -1) return null;
 
-  servers[idx] = { ...servers[idx], ...patch, identifier };
+  const nextIdentifier = String(patch.identifier || servers[idx].identifier || "").trim();
+  servers[idx] = {
+    ...servers[idx],
+    ...patch,
+    identifier: nextIdentifier,
+    displayName: String(patch.displayName || nextIdentifier || servers[idx].displayName || "").trim(),
+  };
   writeServersFile(servers);
-  console.log("[servers.json] updated:", identifier);
+  console.log("[servers.json] updated:", nextIdentifier);
   return servers[idx];
 }
 
 function deleteServer(identifier) {
+  const key = normalizeIdentifier(identifier);
   const servers = readServersFile();
-  const next = servers.filter((s) => s.identifier !== identifier);
+  const next = servers.filter(
+    (s) =>
+      normalizeIdentifier(s.identifier) !== key && normalizeIdentifier(s.displayName) !== key
+  );
+
   if (next.length === servers.length) return false;
 
   writeServersFile(next);
