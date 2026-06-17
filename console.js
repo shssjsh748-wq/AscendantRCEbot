@@ -179,6 +179,15 @@ function norm(s) {
   return String(s || "").trim().toLowerCase();
 }
 
+function findServerMatch(allServers, value) {
+  const key = norm(value);
+  return (
+    allServers.find(
+      (s) => norm(s.identifier) === key || norm(s.displayName) === key || norm(s.identifier) === norm(s.displayName)
+    ) || null
+  );
+}
+
 function buildSlashSuccessEmbed(serverName, command, success) {
   const embed = new EmbedBuilder()
     .setColor(0x95a5a6)
@@ -274,7 +283,7 @@ module.exports = {
           const minutes = interaction.options.getInteger("minutes", true);
           const { listServers } = require("./rce");
           const allServers = listServers();
-          const matchedServer = allServers.find((s) => s.identifier === serverId);
+          const matchedServer = findServerMatch(allServers, serverId);
 
           if (!matchedServer) {
             return interaction.reply({ content: ":x: Server not found.", flags: MessageFlags.Ephemeral }).catch(() => {});
@@ -361,7 +370,7 @@ module.exports = {
           // Log the denied attempt
           const { listServers } = require("./rce");
           const allServers = listServers();
-          const matchedServer = allServers.find((s) => s.identifier === serverId);
+          const matchedServer = findServerMatch(allServers, serverId);
           if (matchedServer) {
             await sendConsoleLog(client, interaction.guildId, serverId, {
               embeds: [
