@@ -1016,17 +1016,6 @@ new SlashCommandBuilder()
   )
   .toJSON(),
 new SlashCommandBuilder()
-  .setName("spawnhypes")
-  .setDescription("Spawn Hypes vending-machine art")
-  .addStringOption((opt) =>
-    opt
-      .setName("server")
-      .setDescription("Pick a server")
-      .setRequired(true)
-      .setAutocomplete(true)
-  )
-  .toJSON(),
-new SlashCommandBuilder()
   .setName("zonetext")
   .setDescription("Configure zone text features")
   .addStringOption((opt) =>
