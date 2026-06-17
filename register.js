@@ -35,6 +35,12 @@ const commands = [
     )
     .addSubcommand((sc) =>
       sc
+        .setName("delete")
+        .setDescription("Delete a game server (admin only)")
+        .addStringOption((opt) => opt.setName("server").setDescription("Pick a server").setRequired(true).setAutocomplete(true))
+    )
+    .addSubcommand((sc) =>
+      sc
         .setName("edit")
         .setDescription("Edit a game server (admin only)")
         .addStringOption((opt) => opt.setName("server").setDescription("Pick a server").setRequired(true).setAutocomplete(true))

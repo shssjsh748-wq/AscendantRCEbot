@@ -161,7 +161,7 @@ module.exports = {
             return interaction.showModal(modal);
           }
 
-          if (sub === "remove") {
+          if (sub === "remove" || sub === "delete") {
             const identifier = interaction.options.getString("server", true);
             const server = getServer(identifier);
 
@@ -174,7 +174,7 @@ module.exports = {
 
             console.log("[GameServer] removed:", identifier);
             return interaction.reply({
-              content: `Removed **${server.displayName}** (${identifier}).`,
+              content: `Removed **${server.displayName || identifier}** (${identifier}).`,
               flags: MessageFlags.Ephemeral,
             });
           }
